@@ -1,0 +1,134 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: auto;
+    width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: honeydew;
+    max-width: 100%
+}
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+}
+
+header{
+    height: 10%;
+    background-color: hotpink;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0%;
+}
+
+main{
+    height: auto;
+    background-color: aquamarine;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#mountain{
+    background-image: url("../img/mountain.jpg");
+}
+
+main .background{
+
+    min-height: 560px;
+    max-height: 1300px;
+}
+
+#lake{
+    background-image: url("../img/lake.jpg");
+}
+
+#gfx{
+    background-image: url("../img/mountaindesign.png");
+}
+
+#temple{
+    background-image: url("../img/temple.png");
+}
+
+.parallax{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+.picture{
+    margin: 2.5px;
+    background-color: blueviolet;
+    border: 1px solid gray;
+}
+
+.small{
+    height: 150px;
+    width: 150px;
+}
+
+.large{
+    height: 300px;
+    width: 300px;
+}
+
+footer{
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: chartreuse;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 1.5rem;
+
+}
+
+
+section{
+    height: auto;
+    padding: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+article{
+    padding: 5%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+article.contact{
+    height: 90vh;
+}
+
+article > p {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+article.contact > p {
+    font-size: 2rem;
+    font-weight: 700;
+}
