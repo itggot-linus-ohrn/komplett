@@ -4,8 +4,8 @@ body{
     height: auto;
     width: 100vw;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: honeydew;
-    max-width: 100%
+    background-color:rgba(250, 250, 250, 0.9);
+    scroll-behavior: smooth;
 }
 
 .wrapper{
@@ -13,18 +13,25 @@ body{
     height: 100%;
 }
 
-header{
-    height: 10%;
-    background-color: hotpink;
+body, .wrapper{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.desktop{
+    display: none;
+}
+
+.title{
     display: flex;
+    align-items: center;
     justify-content: center;
-    position: sticky;
-    top: 0%;
+    text-shadow: 2px 2px black;
 }
 
 main{
     height: auto;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -38,14 +45,18 @@ main{
     color: white;
 }
 
-#mountain{
-    background-image: url("../img/mountain.jpg");
+section ~ .background{
+    min-height: 50vh;
+    max-height: 50vh;
+    height: 50vh;
+}
+.background:first-of-type{
+    min-height: 105vh;
+    max-height: 1300px;
 }
 
-main .background{
-
-    min-height: 560px;
-    max-height: 1300px;
+#mountain{
+    background-image: url("../img/mountain.jpg");
 }
 
 #lake{
@@ -65,12 +76,12 @@ main .background{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
+    width: 100vw;
 }
 
 .picture{
     margin: 2.5px;
-    background-color: blueviolet;
+    background-color: gray;
     border: 1px solid gray;
 }
 
@@ -89,15 +100,16 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: chartreuse;
+    /* background-color: chartreuse; */
 }
 
 footer a {
     color: black;
     text-decoration: none;
-    margin: 10px;
+    margin: 25px;
     font-size: 1.5rem;
-
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 9px;
 }
 
 
@@ -123,12 +135,180 @@ article.contact{
     height: 90vh;
 }
 
-article > p {
+article > h1 {
     font-size: 1.5rem;
+    font-weight: 600;
+    width: auto;
+}
+
+article.contact > h1 {
+    font-size: 2rem;
     font-weight: 600;
 }
 
-article.contact > p {
-    font-size: 2rem;
-    font-weight: 700;
+@media only screen and (min-width: 415px) and (min-height: 415px){
+    
+    
+    #gfx + section{
+        display: grid;
+        grid-template-areas:
+        "one l ."
+        "two l three"
+        ". . four";
+    }
+    
+    .picture{
+        margin: 15px;
+        padding: 0;
+    }
+    
+    .small{
+        width: 200px;
+        height: 200px;
+        grid-area: s;
+    }
+    
+    .one{
+        grid-area: one;
+    }
+    .two{
+        grid-area: two;
+    }
+    .three{
+        grid-area: three;
+    }
+    .four{
+        grid-area: four;
+    }
+    
+    .large{
+        width: 300px;
+        height: 300px;
+        grid-area: l;
+    }
+    
+    h1{
+        font-size: 3rem;
+    }
+    
+    article.contact{
+        height: 82.5vh;
+    }
+    
+    article > h1 {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    
+    article.contact > h1 {
+        font-size: 3rem;
+        font-weight: 500;
+    }
+    
+    footer{
+        height: 10vh;
+    }
+    
+    footer a{
+        font-size: 2rem;
+    }
+    
+    section.top > .small{
+        height: 250px;
+        width: 250px;
+    }
+
+    footer a {
+        margin: 0 75px 0 75px;
+        font-size: 2rem;  
+    }
+}
+
+@media only screen and (min-width: 1023px){
+    
+    #mountain{
+        background-image: url("../img/mountain-desktop.jpg");
+    }
+    
+    #lake{
+        background-image: url("../img/lake-desktop.jpg");
+    }
+    
+    #gfx{
+        background-image: url("../img/mountaindesign-desktop.jpg");
+    }
+    
+    #temple{
+        background-image: url("../img/temple-desktop.png");
+    }
+    
+    section{
+        height: 70vh;
+        display: grid;
+        grid-template-areas:
+        "one l two"
+        "three l four";
+    }
+
+    .desktop{
+        display: flex;
+    }
+
+    #gfx + section{
+        grid-template-areas:
+        "one l two"
+        "three l four";
+    }
+
+    .small{
+        height: 300px;
+        width: 300px;
+    }
+
+    .large{
+        height: 600px;
+        width: 600px;
+    }
+
+    section.top > .small{
+        height: 300px;
+        width: 300px;
+    }
+
+    section ~ .background{
+        min-height: 80vh;
+        max-height: 80vh;
+        height: 80vh;
+    }
+
+    article.contact{
+        height: 72.5vh;
+    }
+    
+    article > h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        width: auto;
+    }
+    
+    article.contact > h1 {
+        font-size: 3rem;
+        font-weight: 500;
+        position: relative;
+    }
+
+    article.contact > h1:first-of-type{
+        left: -25%;
+        top: -15%;
+    }
+
+    article.contact > h1:last-of-type{
+        left: 25%;
+        bottom: -15%;
+    }
+
+    footer a {
+        margin: 0 250px 0 250px;
+        font-size: 3rem;
+    }
 }
