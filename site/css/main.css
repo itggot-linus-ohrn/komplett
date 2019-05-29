@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
+
 body{
     margin: 0;
     padding: 0;
@@ -19,7 +22,9 @@ body, .wrapper{
 }
 
 .desktop{
-    display: none;
+    background-image: url("../img/villager.jpg");
+        background-position: center;
+        background-size: contain;
 }
 
 .title{
@@ -212,12 +217,12 @@ article > h1 {
 }
 
 article.productpage > h2{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Oswald', sans-serif;
     font-size: 2rem;
 }
 
 article.productpage > p{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Work Sans', sans-serif;
     font-size: 1rem;
     font-weight: 900;
     letter-spacing: 2px;
@@ -405,7 +410,7 @@ article.contact > h1 {
         left: -40%;
     }
 
-    main > section{
+    main > section.productpage{
         display: grid;
         grid-template-areas:
         "p t";
