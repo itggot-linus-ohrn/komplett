@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     height: auto;
-    width: 100vw;
+    width: 100%;
     font-family: Arial, Helvetica, sans-serif;
     background-color:rgba(250, 250, 250, 0.9);
     scroll-behavior: smooth;
@@ -85,6 +85,16 @@ section ~ .background{
     border: 1px solid gray;
 }
 
+
+.productpage#mountain{
+    background-image: url("../img/mountain-desktop.jpg");
+    height: 20vh;
+    min-height: 20vh;
+    max-height: 20vh;
+    background-position: center -15%;
+    background-size: contain;
+}
+
 .small{
     height: 150px;
     width: 150px;
@@ -95,6 +105,42 @@ section ~ .background{
     width: 300px;
 }
 
+.product{
+    width: 100%;
+    height: auto;
+    display: flex;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+i{
+    transform:scale(2);
+}
+
+#villager{
+    background-image: url("../img/villager.jpg");
+    min-height: 70vh;
+    max-height: 100vh;
+    background-position: center 125%;
+}
+#head{
+    background-image: url("../img/head.jpg");
+    width: 100%;
+    max-height: 50vh;
+    min-height: 50vh;
+    height: auto;
+    background-repeat: no-repeat;
+}
+
+#text{
+    background-image: url("../img/text.png");
+    width: 100%;
+    max-height: 15vh;
+    min-height: 15vh;
+    height: auto;
+    background-repeat: no-repeat;
+}
+
 footer{
     height: 10%;
     display: flex;
@@ -103,9 +149,12 @@ footer{
     /* background-color: chartreuse; */
 }
 
-footer a {
+a{
     color: black;
     text-decoration: none;
+}
+
+footer a {
     margin: 25px;
     font-size: 1.5rem;
     text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
@@ -135,10 +184,44 @@ article.contact{
     height: 90vh;
 }
 
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    background-color: white;
+    width: 100vw;
+}
+
+header > a{
+    position: relative;
+    left: -15%;
+}
+
+header > h1{
+    position: relative;
+    left: -2.5%;
+}
+
 article > h1 {
     font-size: 1.5rem;
     font-weight: 600;
     width: auto;
+}
+
+article.productpage > h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+}
+
+article.productpage > p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    line-height: 25px;
 }
 
 article.contact > h1 {
@@ -217,7 +300,7 @@ article.contact > h1 {
         height: 250px;
         width: 250px;
     }
-
+    
     footer a {
         margin: 0 75px 0 75px;
         font-size: 2rem;  
@@ -249,38 +332,35 @@ article.contact > h1 {
         "one l two"
         "three l four";
     }
-
-    .desktop{
-        display: flex;
-    }
-
+    
+    
     #gfx + section{
         grid-template-areas:
         "one l two"
         "three l four";
     }
-
+    
     .small{
         height: 300px;
         width: 300px;
     }
-
+    
     .large{
         height: 600px;
         width: 600px;
     }
-
+    
     section.top > .small{
         height: 300px;
         width: 300px;
     }
-
+    
     section ~ .background{
         min-height: 80vh;
         max-height: 80vh;
         height: 80vh;
     }
-
+    
     article.contact{
         height: 72.5vh;
     }
@@ -296,19 +376,50 @@ article.contact > h1 {
         font-weight: 500;
         position: relative;
     }
-
+    
     article.contact > h1:first-of-type{
         left: -25%;
         top: -15%;
     }
-
+    
     article.contact > h1:last-of-type{
         left: 25%;
         bottom: -15%;
     }
-
+    
     footer a {
         margin: 0 250px 0 250px;
         font-size: 3rem;
     }
+
+    header{
+        height: 7.5vh;
+    }
+    
+    header > h1{
+        font-size: 1.5rem;
+    }
+
+    header > a{
+        transform: scale(0.75);
+        left: -40%;
+    }
+
+    main > section{
+        display: grid;
+        grid-template-areas:
+        "p t";
+        grid-template-columns: 50% 50%;
+    }
+
+    .product{
+        grid-area: p;
+        background-position: center;
+    }
+
+    article.productpage{
+        grid-area: t;
+    }
+
+
 }
